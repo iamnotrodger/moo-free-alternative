@@ -1,0 +1,48 @@
+.cart {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 5rem;
+    padding: 2rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+
+    cursor: pointer;
+
+
+    &__container {
+        position: relative;
+    }
+
+    &__icon {
+        font-size: 4.8rem;
+        color: var(--color-light);
+    }
+
+    &__num {
+        position: absolute;
+        top: -0.5rem;
+        left: -0.5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
+        width: 3rem;
+            
+        font-size: 2rem;
+        text-align: center;
+        color: var(--color-light);
+
+        border-radius: 50%;
+        background-color: var(--color-error);
+        opacity: 1;
+
+        transition: opacity 500ms ease;
+
+        &:empty {
+            opacity: 0;
+        }
+    }
+
+}
