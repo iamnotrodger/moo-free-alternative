@@ -1,0 +1,65 @@
+.product {
+    height: 100%;
+    padding: 1.5rem;
+    border-radius: var(--border-radius-small);
+
+    transition: all 250ms ease;
+
+    &:hover {
+        background-color: var(--color-grey-light);
+    }
+
+    &__image {
+        position: relative;
+        height: 20rem;
+        border-radius: var(--border-radius-small);
+        background-size: cover;
+    }
+
+    &__button {
+        position: absolute;
+        right: 0;
+        bottom: -1rem;
+        margin: 1rem;
+        padding: 1rem;
+        margin-left: auto;
+        border-radius: 50%;
+        background-color: var(--color-success);
+
+        color: var(--color-light);
+        cursor: pointer;
+        opacity: 0;
+
+        transition: all 300ms ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(1);
+        }
+    }
+
+    &:hover > &__image > &__button {
+        opacity: 1;
+        bottom: 0;
+    }
+
+    &__info {
+        margin-top: 1rem;
+    }
+
+    &__name {
+        font-size: 2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__price {
+        font-size: 1.4rem;
+        font-family: var(--font-secondary);
+    }
+
+}

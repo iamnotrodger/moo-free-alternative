@@ -1,3 +1,3 @@
 initialLoadCart();
-populateProducts("shop", products);
+populateProducts("shop-products", products);
 bindClickOnProduct();
