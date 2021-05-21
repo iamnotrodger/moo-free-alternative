@@ -1,0 +1,2 @@
+populateProducts("shop", products);
+bindClickOnProduct();
