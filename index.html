@@ -1,36 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="style/style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
-    <title>MooFree</title>
-</head>
-<body>
-
-    <div class="navigation">
-        <h1 class="navigation__title">MooFree</h1>
-    </div>
-
-    <!--<header class="header"></header>-->
-
-    <main>
-        <div class="shop" id="shop">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <link href="style/style.css" rel="stylesheet" type="text/css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700"
+            rel="stylesheet"
+        />
+        <title>MooFree</title>
+    </head>
+    <body>
+        <div class="navigation">
+            <h1 class="navigation__title">MooFree</h1>
         </div>
 
-        <div class="checkout" id="checkout"></div>
+        <nav class="nav"></nav>
 
-        <div class="cart-button">
-            <div class="cart-button__number"></div>
-            <i class="material-icons">shopping_cart</i>
-        </div>
+        <main>
+            <div class="shop" id="shop">
+                <form class="filter" id="filter" name="filter">
+                    <h2 class="filter__title">Filter</h2>
 
-    </main>
+                    <div class="filter__section">
+                        <h3 class="filter__header">Category</h3>
+                        <div class="filter__group">
+                            <label class="filter__label">
+                                <input
+                                    type="checkbox"
+                                    name="category"
+                                    value="lactose-free"
+                                    class="filter__option"
+                                />
+                                Lactose Free
+                            </label>
+                        </div>
+                        <div class="filter__group">
+                            <label class="filter__label">
+                                <input
+                                    type="checkbox"
+                                    name="category"
+                                    value="nut-free"
+                                    class="filter__option"
+                                />
+                                Nut Free
+                            </label>
+                        </div>
+                    </div>
 
-    <script src="script/cart.js"></script>
-    <script src="script/product.js"></script>
-    <script src="script/index.js"></script>
-</body>
+                    <div class="filter__section">
+                        <h3 class="filter__header">Price</h3>
+                        <div class="filter__group">
+                            <label class="filter__label">
+                                <input
+                                    type="radio"
+                                    name="price"
+                                    value="low-to-high"
+                                    class="filter__option"
+                                />
+                                Lowest to Highest
+                            </label>
+                        </div>
+                        <div class="filter__group">
+                            <label class="filter__label">
+                                <input
+                                    type="radio"
+                                    name="price"
+                                    value="high-to-low"
+                                    class="filter__option"
+                                />
+                                Highest to Lowest
+                            </label>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Apply" class="btn" />
+                </form>
+                <div class="shop__products" id="shop-products"></div>
+            </div>
+
+            <div class="checkout" id="checkout"></div>
+
+            <div class="cart">
+                <div class="cart__contianer">
+                    <div id="cart-num" class="cart__num"></div>
+                    <i class="material-icons cart__icon">shopping_cart </i>
+                </div>
+            </div>
+        </main>
+
+        <script src="script/productData.js"></script>
+        <script src="script/cart.js"></script>
+        <script src="script/product.js"></script>
+        <script src="script/index.js"></script>
+    </body>
 </html>
