@@ -1,3 +1,31 @@
+const populateProducts = (id, products, disabled = false) => {
+  let element = document.getElementById(id);
+  element.innerHTML = "";
+  products.forEach((product) => {
+    element.innerHTML += `<div class="product" disabled=${disabled}> 
+          <div class="product__modal"> 
+          <i class="material-icons product__button" key=${product.id}>add_shopping_cart</i>
+          </div> 
+          <img class="product__image" src="${product.image}"> 
+          <div class="product__info">
+          <h3 class="product__name">${product.name}</h3> 
+          <p class="product__price"'>${product.price}</p> 
+          </div>
+          </div>`;
+  });
+};
+
+const bindClickOnProduct = () => {
+  Array.from(document.getElementsByClassName("product__button")).forEach(
+    (product) => {
+      product.addEventListener("click", () => {
+        const id = product.getAttribute("key");
+        addToCart(id);
+      });
+    }
+  );
+};
+
 const products = [
   {
     id: 1,
@@ -28,30 +56,3 @@ const products = [
   },
 ];
 
-const populateProducts = (id, products, disabled = false) => {
-  let element = document.getElementById(id);
-  element.innerHTML = "";
-  products.forEach((product) => {
-    element.innerHTML += `<div class="product" disabled=${disabled}> 
-          <div class="product__modal"> 
-          <i class="material-icons product__button" key=${product.id}>add</i>
-          </div> 
-          <img class="product__image" src="${product.image}"> 
-          <div class="product__info">
-          <h3 class="product__name">${product.name}</h3> 
-          <p class="product__price"'>${product.price}</p> 
-          </div>
-          </div>`;
-  });
-};
-
-const bindClickOnProduct = () => {
-  Array.from(document.getElementsByClassName("product__button")).forEach(
-    (product) => {
-      product.addEventListener("click", () => {
-        const id = product.getAttribute("key");
-        addToCart(Number(id));
-      });
-    }
-  );
-};
