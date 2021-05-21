@@ -3,6 +3,8 @@
     padding: 1.5rem;
     border-radius: var(--border-radius-small);
 
+    box-shadow: var(--shadow-dark);
+
     transition: all 250ms ease;
 
     &:hover {
@@ -54,19 +56,18 @@
     }
 
     &__info {
+        display: flex;
+        align-items: center;
         margin-top: 1rem;
     }
 
     &__name {
         font-size: 2rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        margin-right: auto;
     }
 
     &__price {
         font-size: 1.4rem;
         font-family: var(--font-secondary);
     }
-
 }
