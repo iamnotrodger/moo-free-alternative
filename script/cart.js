@@ -1,18 +1,27 @@
-let cart = new Map();
+let cart = new Set();
 const cartKey = "cart";
 
-const addToCart = (id) => {
-  cart.set(id, true);
+const initialLoadCart = () => {
+  const cartString = localStorage.getItem(cartKey);
+  if (cartString) cart = new Set(JSON.parse(cartString));
   updateNumCartElement(cart.size);
+};
+
+const addToCart = (id) => {
+  cart.add(id);
+  updateNumCartElement(cart.size);
+  localStorage.setItem(cartKey, JSON.stringify([...cart]));
 };
 
 const removeFromCart = (id) => {
   cart.delete(id);
   updateNumCartElement(cart.size);
+  localStorage.setItem(cartKey, JSON.stringify([...cart]));
 };
 
 const clearCart = () => {
   cart.clear();
+  localStorage.removeItem(cartKey);
   updateNumCartElement(0);
 };
 
