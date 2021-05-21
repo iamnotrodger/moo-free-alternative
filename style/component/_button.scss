@@ -1,0 +1,16 @@
+.btn {
+   font-size: 2rem; 
+   padding: 1rem;
+   width: 100%;
+   border: none;
+   color: var(--color-light);
+   border-radius: var(--border-radius);
+   background-color: var(--color-primary);
+   cursor: pointer;
+
+   transition: all 250ms ease;
+
+   &:hover {
+       filter: brightness(1.1);
+   }
+}
