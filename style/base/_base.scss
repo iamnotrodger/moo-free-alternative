@@ -1,0 +1,37 @@
+:root {
+	--font-primary: 'Roboto Condensed', Sans-Serif;
+	--font-secondary: 'Cabin', Sans-Serif;
+
+	--color-primary: #2699fb;
+	--color-primary-dark: #005397;
+	--color-secondary: #7fc4fd;
+	--color-tertiary: #bce0fd;
+	--color-quaternary: #f1f9ff;
+
+	--color-grey-dark: #ababab;
+	--color-grey-light: #eaeaea;
+
+	--color-light: #fff;
+
+	--border-radius: 2rem;
+	--border-radius-small: 1rem;
+
+	--shadow-dark: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
+	--shadow-dark-big: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+
+	--max-content-width: 1200px;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	font-family: var(--font-primary);
+}
