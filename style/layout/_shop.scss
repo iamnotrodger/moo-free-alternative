@@ -1,0 +1,42 @@
+.shop {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: max-content 1fr;
+    align-items: start;
+
+    &__products {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        grid-gap: 2rem;
+        padding: 0 2rem;
+    }
+}
+
+.filter {
+    padding: 2rem 3rem;
+    background-color: var(--color-grey-light);
+    border-radius: var(--border-radius-small);
+    box-shadow: var(--shadow-dark);
+
+    &__title {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+
+    &__section {
+        margin-bottom: 1.5rem;
+    }
+
+    &__header {
+        font-size: 2rem;
+    }
+
+    &__group {
+        margin: 1rem;
+    }
+
+    &__label {
+        font-size: 1.6rem;
+        font-family: var(--font-secondary);
+    }
+}
