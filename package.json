@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm-run-all --parallel live watch",
     "live": "live-server",
-    "watch": "node-sass style/main.scss style/style.css -w",
+    "watch": "node-sass style/main.scss style/style.css -wo",
     "build": "node-sass style/main.scss style/style.css --output-style compressed"
   },
   "keywords": [],
