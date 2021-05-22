@@ -1,4 +1,4 @@
-.shop {
+.checkout {
     display: flex;
     flex-wrap: wrap;
     align-items: start;
@@ -6,12 +6,12 @@
 
     &__products {
         flex: 10 0 auto;
+        margin-bottom: 2rem;
     }
 }
 
-.filter {
-    flex: 1 0 auto;
-    margin-bottom: 2rem;
+.checkout-reciept {
+    flex: 1 0 20%;
     padding: 2rem 3rem;
     background-color: var(--color-grey-light);
     border-radius: var(--border-radius-small);
@@ -22,24 +22,29 @@
         margin-bottom: 2rem;
     }
 
-    &__section {
-        margin-bottom: 1.5rem;
+    &__list {
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        padding: 1rem;
+        margin-bottom: 2rem;
     }
 
-    &__header {
+    &__total {
+        text-align: end;
+        font-size: 3rem;
+        padding: 1rem 0;
+    }
+}
+
+.purchase-item {
+    display: flex;
+    &__name {
         font-size: 2rem;
+        color: var(--color-success);
+        margin-right: auto;
     }
-
-    &__group {
-        margin: 1rem;
-    }
-
-    &__label {
+    &__price {
         font-size: 1.6rem;
         font-family: var(--font-secondary);
-    }
-
-    &__button {
-        padding: 0.5rem;
     }
 }
