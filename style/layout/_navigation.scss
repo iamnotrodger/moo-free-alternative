@@ -1,0 +1,13 @@
+.navigation {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primary);
+    padding: 0 1.5rem;
+
+    &__title {
+        color: var(--color-light);
+        font-size: 4rem;
+        margin-left: 1rem;
+        margin-right: auto;
+    }
+}

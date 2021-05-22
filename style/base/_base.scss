@@ -4,6 +4,7 @@
 
     --color-primary: #17c37b;
     --color-secondary: #61bfad;
+    --color-tertiary: #d3e8e1;
 
     --color-grey-dark: #ababab;
     --color-grey-light: #eaeaea;
@@ -39,5 +40,5 @@ html {
 main {
     max-width: var(--max-content-width);
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 2rem;
 }

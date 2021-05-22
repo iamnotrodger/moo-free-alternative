@@ -40,13 +40,13 @@
     }
 
     &__link:hover + &__label {
-        background-color: var(--color-secondary);
-        color: var(--color-grey-light);
+        background-color: var(--color-tertiary);
+        color: var(--color-secondary);
     }
 
     &__link:checked + &__label {
-        color: var(--color-light);
-        background-color: var(--color-primary);
+        color: var(--color-primary);
+        background-color: var(--color-light);
     }
 
     &__icon {

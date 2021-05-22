@@ -17,40 +17,43 @@
     <body>
         <div class="navigation">
             <h1 class="navigation__title">MooFree</h1>
+            <nav class="tab">
+                <ul class="tab__list">
+                    <li class="tab__item">
+                        <input
+                            type="radio"
+                            name="tab"
+                            value="shop"
+                            class="tab__link"
+                            id="tab-link-1"
+                            checked="checked"
+                        />
+                        <label for="tab-link-1" class="tab__label">
+                            Shop
+                            <i class="material-icons tab__icon"
+                                >shopping_basket
+                            </i>
+                        </label>
+                    </li>
+                    <li class="tab__item">
+                        <input
+                            type="radio"
+                            name="tab"
+                            value="Checkout"
+                            class="tab__link"
+                            id="tab-link-2"
+                        />
+                        <label for="tab-link-2" class="tab__label">
+                            Checkout
+                            <div id="cart-num" class="tab__num"></div>
+                            <i class="material-icons tab__icon"
+                                >shopping_cart
+                            </i>
+                        </label>
+                    </li>
+                </ul>
+            </nav>
         </div>
-
-        <nav class="tab">
-            <ul class="tab__list">
-                <li class="tab__item">
-                    <input
-                        type="radio"
-                        name="tab"
-                        value="shop"
-                        class="tab__link"
-                        id="tab-link-1"
-                        checked="checked"
-                    />
-                    <label for="tab-link-1" class="tab__label">
-                        Shop
-                        <i class="material-icons tab__icon">shopping_basket </i>
-                    </label>
-                </li>
-                <li class="tab__item">
-                    <input
-                        type="radio"
-                        name="tab"
-                        value="Checkout"
-                        class="tab__link"
-                        id="tab-link-2"
-                    />
-                    <label for="tab-link-2" class="tab__label">
-                        Checkout
-                        <div id="cart-num" class="tab__num"></div>
-                        <i class="material-icons tab__icon">shopping_cart </i>
-                    </label>
-                </li>
-            </ul>
-        </nav>
 
         <main>
             <div class="shop" id="shop">
