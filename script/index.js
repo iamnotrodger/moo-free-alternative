@@ -17,8 +17,8 @@ const applyFilter = (event) => {
 
     if (categories.length > 0 || price) {
         const filteredProducts = filterProducts(products, categories, price);
+        shopProducts.innerHTML = '';
         populateProducts(shopProducts, addSelectedProperty(filteredProducts));
-        bindProductClick();
     }
 };
 
@@ -45,6 +45,5 @@ const filterProducts = (products, categories, price) => {
 
 initialLoadCart();
 populateProducts(shopProducts, addSelectedProperty(products));
-bindProductClick();
 
 filter.addEventListener('submit', applyFilter);
