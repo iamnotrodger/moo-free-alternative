@@ -1,4 +1,4 @@
-const createProductElement = (product, click = productClick) => {
+const createProductElement = (product, click = handleProductClick) => {
     const element = document.createElement('div');
     element.classList.add('product');
 
@@ -31,7 +31,7 @@ const createProductElement = (product, click = productClick) => {
     return element;
 };
 
-const productClick = (id) => (event) => {
+const handleProductClick = (id) => (event) => {
     const button = event.target;
 
     if (!button.classList.contains('product__button--selected')) {
