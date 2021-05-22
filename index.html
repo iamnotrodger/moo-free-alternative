@@ -25,10 +25,10 @@
                             name="tab"
                             value="shop"
                             class="tab__link"
-                            id="tab-link-1"
+                            id="shop-tab"
                             checked="checked"
                         />
-                        <label for="tab-link-1" class="tab__label">
+                        <label for="shop-tab" class="tab__label">
                             Shop
                             <i class="material-icons tab__icon"
                                 >shopping_basket
@@ -41,9 +41,9 @@
                             name="tab"
                             value="checkout"
                             class="tab__link"
-                            id="tab-link-2"
+                            id="checkout-tab"
                         />
-                        <label for="tab-link-2" class="tab__label">
+                        <label for="checkout-tab" class="tab__label">
                             Checkout
                             <div id="cart-num" class="tab__num"></div>
                             <i class="material-icons tab__icon"
@@ -119,19 +119,32 @@
                             class="btn filter__button"
                         />
                     </form>
-                    <div class="shop__products" id="shop-products"></div>
+                    <div
+                        class="shop__products product-list"
+                        id="shop-products"
+                    ></div>
                 </div>
             </div>
 
             <div class="tab-content" id="checkout">
                 <div class="checkout">
-                    <div class="checkout-menu">
-                        <h1 style="background: red;">checkout</h1>
-                    </div>
                     <div
-                        class="checkout__products"
+                        class="checkout__products product-list"
                         id="checkout-products"
                     ></div>
+                    <div class="checkout-reciept">
+                        <h2 class="checkout-reciept__title">Reciept</h2>
+                        <div
+                            class="checkout-reciept__list"
+                            id="checkout-reciept"
+                        ></div>
+                        <button
+                            class="btn checkout-reciept__button"
+                            id="checkout-button"
+                        >
+                            Checkout
+                        </button>
+                    </div>
                 </div>
             </div>
         </main>
@@ -139,6 +152,7 @@
         <script src="script/productData.js"></script>
         <script src="script/cart.js"></script>
         <script src="script/product.js"></script>
+        <script src="script/checkout.js"></script>
         <script src="script/index.js"></script>
     </body>
 </html>
