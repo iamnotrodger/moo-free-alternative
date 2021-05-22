@@ -1,9 +1,12 @@
 .shop {
-    display: grid;
-    grid-template-columns: max-content 1fr;
+    display: flex;
+    flex-wrap: wrap;
     align-items: start;
+    justify-content: center;
 
     &__products {
+        flex: 10 0 auto;
+        min-width: 80rem;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
         grid-gap: 2rem;
@@ -12,6 +15,8 @@
 }
 
 .filter {
+    flex: 1 0 auto;
+    margin-bottom: 2rem;
     padding: 2rem 3rem;
     background-color: var(--color-grey-light);
     border-radius: var(--border-radius-small);

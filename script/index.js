@@ -20,6 +20,8 @@ const applyFilter = (event) => {
         const filteredProducts = filterProducts(products, categories, price);
         shopProducts.innerHTML = '';
         populateProducts(shopProducts, addSelectedProperty(filteredProducts));
+    } else {
+        populateProducts(shopProducts, addSelectedProperty(products));
     }
 };
 
@@ -57,7 +59,6 @@ const onTabClick = (event) => {
             () => {
                 selectedTab.classList.add('active-tab');
                 selectedTab.classList.remove('inactive-tab');
-                //activeTab.classList.remove('inactive-tab');
             },
             { once: true }
         );
