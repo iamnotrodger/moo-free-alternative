@@ -22,7 +22,7 @@ const createProductElement = (product, click = productClick) => {
     name.innerHTML = product.name;
     const price = document.createElement('p');
     price.classList.add('product__price');
-    price.innerHTML = product.price;
+    price.innerHTML = '$' + product.price.toFixed(2);
 
     info.appendChild(name);
     info.appendChild(price);

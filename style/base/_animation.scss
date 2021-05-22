@@ -1,0 +1,26 @@
+.tab-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    padding: 2rem;
+    opacity: 0;
+
+    transform: translateX(-100%);
+    transition: all 500ms ease;
+
+    &.active-tab {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    &.inactive-tab {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+#checkout.tab-content.inactive-tab {
+    transform: translateX(-100%);
+}

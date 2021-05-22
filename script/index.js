@@ -1,5 +1,6 @@
 const shopProducts = document.getElementById('shop-products');
 const filter = document.getElementById('filter');
+const tabs = document.querySelectorAll('.tab__link');
 
 const addSelectedProperty = (products) => {
     return products.map((product) => ({
@@ -43,7 +44,28 @@ const filterProducts = (products, categories, price) => {
     return fileteredProducts;
 };
 
+const onTabClick = (event) => {
+    const activeTab = document.querySelector('.active-tab');
+    const selectedTab = document.getElementById(event.target.value);
+
+    if (activeTab.id !== selectedTab.id) {
+        activeTab.classList.remove('active-tab');
+        activeTab.classList.add('inactive-tab');
+
+        activeTab.addEventListener(
+            'transitionend',
+            () => {
+                selectedTab.classList.add('active-tab');
+                selectedTab.classList.remove('inactive-tab');
+                //activeTab.classList.remove('inactive-tab');
+            },
+            { once: true }
+        );
+    }
+};
+
 initialLoadCart();
 populateProducts(shopProducts, addSelectedProperty(products));
 
 filter.addEventListener('submit', applyFilter);
+tabs.forEach((tab) => tab.addEventListener('click', onTabClick));
