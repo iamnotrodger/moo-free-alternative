@@ -2,11 +2,8 @@
     --font-primary: 'Roboto Condensed', Sans-Serif;
     --font-secondary: 'Cabin', Sans-Serif;
 
-    --color-primary: #2699fb;
-    --color-primary-dark: #005397;
-    --color-secondary: #7fc4fd;
-    --color-tertiary: #bce0fd;
-    --color-quaternary: #f1f9ff;
+    --color-primary: #17c37b;
+    --color-secondary: #61bfad;
 
     --color-grey-dark: #ababab;
     --color-grey-light: #eaeaea;
@@ -14,7 +11,7 @@
     --color-light: #fff;
 
     --color-error: #ef303b;
-    --color-success: #17c37b;
+    --color-success: #2699fb;
 
     --border-radius: 2rem;
     --border-radius-small: 0.5rem;
@@ -42,5 +39,5 @@ html {
 main {
     max-width: var(--max-content-width);
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0 2rem;
 }

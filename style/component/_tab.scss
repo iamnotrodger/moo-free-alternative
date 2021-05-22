@@ -1,0 +1,82 @@
+.tab {
+    margin: 2rem;
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+
+    &__item {
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        visibility: hidden;
+    }
+
+    &__label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        cursor: pointer;
+
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: var(--color-grey-dark);
+        background-color: var(--color-grey-light);
+        border-radius: var(--border-radius-small);
+
+        transition: all 500ms ease;
+    }
+
+    &__link:hover + &__label {
+        background-color: var(--color-secondary);
+        color: var(--color-grey-light);
+    }
+
+    &__link:checked + &__label {
+        color: var(--color-light);
+        background-color: var(--color-primary);
+    }
+
+    &__icon {
+        margin-left: 1rem;
+    }
+
+    &__num {
+        position: absolute;
+        top: -1rem;
+        right: -1rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
+        width: 3rem;
+
+        font-size: 2rem;
+        text-align: center;
+        color: var(--color-light);
+
+        border-radius: 50%;
+        background-color: var(--color-success);
+        opacity: 1;
+
+        transition: opacity 500ms ease;
+
+        &:empty {
+            opacity: 0;
+        }
+    }
+}
+

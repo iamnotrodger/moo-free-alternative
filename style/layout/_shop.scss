@@ -1,6 +1,5 @@
 .shop {
     display: grid;
-    padding: 1rem;
     grid-template-columns: max-content 1fr;
     align-items: start;
 
@@ -38,5 +37,9 @@
     &__label {
         font-size: 1.6rem;
         font-family: var(--font-secondary);
+    }
+
+    &__button {
+        padding: 0.5rem;
     }
 }
