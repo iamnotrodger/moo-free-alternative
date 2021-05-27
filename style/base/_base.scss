@@ -10,6 +10,7 @@
     --color-grey-light: #eaeaea;
 
     --color-light: #fff;
+    --color-dark: #000000;
 
     --color-error: #ef303b;
     --color-success: #2699fb;
@@ -35,6 +36,10 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     font-family: var(--font-primary);
+}
+
+body {
+    overflow-x: hidden;
 }
 
 main {
