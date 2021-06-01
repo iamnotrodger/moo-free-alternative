@@ -10,11 +10,11 @@ module.exports = {
 			chunkFilename: '[name].css',
 		}),
 		new HtmlWebpackPlugin({
-			template: 'index.html',
+			template: './src/index.html',
 		}),
 		new CleanWebpackPlugin(),
 	],
-	entry: './script/index.js',
+	entry: './src/script/index.js',
 	output: {
 		path: path.join(__dirname, 'dist'),
 		filename: 'bundle.js',
