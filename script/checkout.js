@@ -1,72 +1,63 @@
+import { clearCart, getCart } from './cart';
+import { createProductElement, handleProductClick } from './product';
+
+const checkoutReceipt = document.getElementById('checkout-receipt');
 const checkoutProducts = document.getElementById('checkout-products');
-const checkoutReciept = document.getElementById('checkout-reciept');
 
-let selectedProducts = [];
-
-const handleCheckoutTabClick = () => {
-    selectedProducts = filterSelectedProducts(products, cart);
-    checkoutProducts.innerHTML = '';
-    populateProducts(
-        checkoutProducts,
-        selectedProducts,
-        handleCheckoutProductClick
-    );
-    populateRecipet(selectedProducts);
+export const handleCheckout = () => {
+	clearCart();
+	checkoutReceipt.innerHTML = '';
+	populateReceipt();
 };
 
-const filterSelectedProducts = (products, cart) => {
-    const selectedProducts = [];
+export const populateCheckoutProducts = () => {
+	const cart = getCart();
 
-    products.forEach((product) => {
-        if (cart.has(product.id)) {
-            product.selected = true;
-            selectedProducts.push(product);
-        }
-    });
+	checkoutProducts.innerHTML = '';
 
-    return selectedProducts;
+	cart.forEach((product) => {
+		const productElement = createProductElement(
+			product,
+			true,
+			handleCheckoutProductClick
+		);
+		checkoutProducts.appendChild(productElement);
+	});
 };
 
-const populateRecipet = (products) => {
-    checkoutReciept.innerHTML = '';
-    let total = 0;
+export const populateReceipt = () => {
+	checkoutReceipt.innerHTML = '';
+	const cart = getCart();
+	let total = 0;
 
-    products.forEach((product) => {
-        checkoutReciept.innerHTML += `
+	cart.forEach((product) => {
+		checkoutReceipt.innerHTML += `
             <div class="purchase-item">
                 <h3 class="purchase-item__name">${product.name}</h3>
                 <p class="purchase-item__price">$${product.price.toFixed(2)}</p>
             </div>
             `;
-        total += product.price;
-    });
+		total += product.price;
+	});
 
-    checkoutReciept.innerHTML += `<h2 class="checkout-reciept__total">$${total.toFixed(
-        2
-    )}</h2>`;
+	checkoutReceipt.innerHTML += `<h2 class="checkout-receipt__total">$${total.toFixed(
+		2
+	)}</h2>`;
 };
 
-const handleCheckoutProductClick = (id) => (event) => {
-    handleProductClick(id)(event);
+const handleCheckoutProductClick = (product) => (event) => {
+	handleProductClick(product)(event);
 
-    const product = event.target.parentElement.parentElement;
-    product.classList.add('product-remove');
+	const productElement = event.target.parentElement.parentElement;
+	productElement.classList.add('product-remove');
 
-    product.addEventListener(
-        'transitionend',
-        () => {
-            product.remove();
-        },
-        { once: true }
-    );
+	productElement.addEventListener(
+		'transitionend',
+		() => {
+			productElement.remove();
+		},
+		{ once: true }
+	);
 
-    selectedProducts = selectedProducts.filter((product) => product.id !== id);
-    populateRecipet(selectedProducts);
-};
-
-const handleCheckout = () => {
-    clearCart();
-    selectedProducts = [];
-    checkoutProducts.innerHTML = '';
-    populateRecipet(selectedProducts);
+	populateReceipt();
 };
