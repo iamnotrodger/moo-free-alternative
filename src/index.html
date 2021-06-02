@@ -58,31 +58,40 @@
             <div class="tab-content active-tab" id="shop">
                 <div class="shop">
                     <form class="filter" id="filter" name="filter">
-                        <h2 class="filter__title">Filter</h2>
+                        <div class="filter__title-container">
+                            <i class='material-icons filter__title-icon'>sort</i> 
+                            <h2 class="filter__title">Filter</h2>
+                        </div>
 
                         <div class="filter__section">
                             <h3 class="filter__header">Category</h3>
-                            <div class="filter__group">
-                                <label class="filter__label">
+                            <div class="filter__group--flex">
+                                <div class="filter__item">
                                     <input
                                         type="checkbox"
                                         name="category"
                                         value="lactose-free"
-                                        class="filter__option"
+                                        id="lactose-free"
+                                        class="option__input"
                                     />
-                                    Lactose Free
-                                </label>
-                            </div>
-                            <div class="filter__group">
-                                <label class="filter__label">
+                                    <label for="lactose-free" class="option">
+                                        <i class="material-icons option__icon">done</i>
+                                        Lactose Free
+                                    </label>
+                                </div>
+                                <div class="filter__item">
                                     <input
                                         type="checkbox"
                                         name="category"
                                         value="nut-free"
-                                        class="filter__option"
+                                        id="nut-free"
+                                        class="option__input"
                                     />
-                                    Nut Free
-                                </label>
+                                    <label for="nut-free" class="option">
+                                        <i class="material-icons option__icon">done</i>
+                                        Nut Free
+                                    </label>
+                                </div>
                             </div>
                         </div>
 

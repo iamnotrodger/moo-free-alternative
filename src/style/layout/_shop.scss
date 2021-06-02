@@ -10,16 +10,26 @@
 }
 
 .filter {
-	flex: 1 0 auto;
+	flex: 1 0 20%;
 	margin-bottom: 2rem;
 	padding: 2rem 3rem;
 	background-color: var(--color-grey-light);
 	border-radius: var(--border-radius-small);
 	box-shadow: var(--shadow-dark);
 
+	&__title-container {
+		display: flex;
+		align-items: center;
+		margin-bottom: 2rem;
+	}
+
+	&__title-icon {
+		font-size: 3.2rem;
+		margin-right: 1rem;
+	}
+
 	&__title {
 		font-size: 2.4rem;
-		margin-bottom: 2rem;
 	}
 
 	&__section {
@@ -31,15 +41,19 @@
 	}
 
 	&__group {
-		margin: 1rem;
+		margin: 1rem 0;
+
+		&--flex {
+			margin: 1rem 0;
+			overflow-x: hidden;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+		}
 	}
 
 	&__label {
 		font-size: 1.6rem;
 		font-family: var(--font-secondary);
-	}
-
-	&__button {
-		padding: 0.5rem;
 	}
 }
