@@ -1,0 +1,35 @@
+.clear {
+	position: relative;
+	cursor: pointer;
+
+	&__icon {
+		font-size: 3.2rem;
+		color: var(--color-grey-dark);
+		padding: 0.5rem;
+
+		transition: all 500ms ease;
+	}
+
+	&__text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+
+		font-size: 1.6rem;
+		color: var(--color-dark);
+		white-space: nowrap;
+
+		transition: all 500ms ease;
+	}
+
+	&:hover > &__text {
+		transform: translate(-130%, -50%);
+		opacity: 1;
+	}
+
+	&:hover > &__icon {
+		color: var(--color-dark);
+	}
+}
