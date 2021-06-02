@@ -42,6 +42,9 @@ export const createProductElement = (
 	info.appendChild(price);
 	element.appendChild(info);
 
+	const widget = createProductWidget(product.lactoseFree, product.nutFree);
+	element.appendChild(widget);
+
 	return element;
 };
 
@@ -57,4 +60,31 @@ export const handleProductClick = (product) => (event) => {
 	}
 
 	button.classList.toggle('product__button--selected');
+};
+
+const createProductWidget = (lactoseFree, nutFree) => {
+	const widget = document.createElement('div');
+	widget.classList.add('product__widget');
+
+	if (!lactoseFree) {
+		const category = createCategory('Lactose', 'lactose');
+		widget.appendChild(category);
+	}
+
+	if (!nutFree) {
+		const category = createCategory('Nut', 'nut');
+		widget.appendChild(category);
+	}
+
+	return widget;
+};
+
+const createCategory = (label, className) => {
+	const category = document.createElement('div');
+	category.classList.add('category');
+	category.classList.add(`category--${className}`);
+	category.innerHTML = "<a class='material-icons category__icon'>error</a>";
+	category.innerHTML += `<p class='category__text'>${label}</p>`;
+
+	return category;
 };
