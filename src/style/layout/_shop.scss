@@ -1,45 +1,45 @@
 .shop {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: start;
-    justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: center;
 
-    &__products {
-        flex: 10 0 auto;
-    }
+	&__products {
+		flex: 10 0 auto;
+	}
 }
 
 .filter {
-    flex: 1 0 auto;
-    margin-bottom: 2rem;
-    padding: 2rem 3rem;
-    background-color: var(--color-grey-light);
-    border-radius: var(--border-radius-small);
-    box-shadow: var(--shadow-dark);
+	flex: 1 0 auto;
+	margin-bottom: 2rem;
+	padding: 2rem 3rem;
+	background-color: var(--color-grey-light);
+	border-radius: var(--border-radius-small);
+	box-shadow: var(--shadow-dark);
 
-    &__title {
-        font-size: 2.4rem;
-        margin-bottom: 2rem;
-    }
+	&__title {
+		font-size: 2.4rem;
+		margin-bottom: 2rem;
+	}
 
-    &__section {
-        margin-bottom: 1.5rem;
-    }
+	&__section {
+		margin-bottom: 1.5rem;
+	}
 
-    &__header {
-        font-size: 2rem;
-    }
+	&__header {
+		font-size: 2rem;
+	}
 
-    &__group {
-        margin: 1rem;
-    }
+	&__group {
+		margin: 1rem;
+	}
 
-    &__label {
-        font-size: 1.6rem;
-        font-family: var(--font-secondary);
-    }
+	&__label {
+		font-size: 1.6rem;
+		font-family: var(--font-secondary);
+	}
 
-    &__button {
-        padding: 0.5rem;
-    }
+	&__button {
+		padding: 0.5rem;
+	}
 }

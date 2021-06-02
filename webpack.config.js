@@ -48,4 +48,7 @@ module.exports = {
 		],
 	},
 	devtool: 'source-map',
+	devServer: {
+		open: true,
+	},
 };
