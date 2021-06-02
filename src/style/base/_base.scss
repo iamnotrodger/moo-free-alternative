@@ -1,50 +1,55 @@
 :root {
-    --font-primary: 'Roboto Condensed', Sans-Serif;
-    --font-secondary: 'Cabin', Sans-Serif;
+	--font-primary: 'Roboto Condensed', Sans-Serif;
+	--font-secondary: 'Cabin', Sans-Serif;
 
-    --color-primary: #17c37b;
-    --color-secondary: #61bfad;
-    --color-tertiary: #d3e8e1;
+	--color-primary: #17c37b;
+	--color-secondary: #61bfad;
+	--color-tertiary: #d3e8e1;
 
-    --color-grey-dark: #ababab;
-    --color-grey-light: #eaeaea;
+	--color-grey-dark: #ababab;
+	--color-grey-light: #eaeaea;
 
-    --color-light: #fff;
-    --color-dark: #000000;
+	--color-light: #fff;
+	--color-dark: #000000;
 
-    --color-error: #ef303b;
-    --color-success: #2699fb;
+	--color-error: #ef303b;
+	--color-success: #2699fb;
 
-    --border-radius: 2rem;
-    --border-radius-small: 0.5rem;
+	--border-radius: 2rem;
+	--border-radius-small: 0.5rem;
 
-    --shadow-dark: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
-    --shadow-dark-big: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+	--shadow-dark: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+	--shadow-dark-big: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
 
-    --max-content-width: 1920px;
+	--max-content-width: 1920px;
 }
 
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-    font-family: var(--font-primary);
+	box-sizing: border-box;
+	font-size: 62.5%;
+	font-family: var(--font-primary);
+	height: 100%;
 }
 
 body {
-    overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow-x: hidden;
 }
 
 main {
-    max-width: var(--max-content-width);
-    margin: 0 auto;
-    padding: 2rem;
-    position: relative;
+	position: relative;
+	margin: 0 auto;
+	padding: 2rem;
+	width: 100%;
+	max-width: var(--max-content-width);
 }

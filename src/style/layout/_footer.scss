@@ -1,29 +1,26 @@
 .footer {
-    position: absolute;
-    bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	margin-top: auto;
+	padding: 2rem;
+	background-color: var(--color-primary);
+	color: var(--color-light);
 
-    width: 100vw;
-    padding: 2rem;
-    background-color: var(--color-primary);
-    color: var(--color-light);
+	&__title {
+		font-size: 2.4rem;
+	}
 
-    &__title {
-        font-size: 2.4rem;
-    }
+	&__icon {
+		width: 3rem;
+		height: auto;
+		fill: var(--color-light);
+		margin-left: 2rem;
+		transition: fill 500ms ease;
 
-    &__icon {
-        width: 3rem;
-        height: auto;
-        fill: var(--color-light);
-        margin-left: 2rem;
-        transition: fill 500ms ease;
-
-        &:hover {
-            fill: var(--color-dark);
-        }
-    }
+		&:hover {
+			fill: var(--color-dark);
+		}
+	}
 }
